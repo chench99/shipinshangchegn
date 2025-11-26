@@ -29,6 +29,11 @@
           <template #title>食品管理</template>
         </el-menu-item>
         
+<el-menu-item index="/back/inventory">
+  <i class="fas fa-boxes menu-icon"></i>
+  <template #title>库存管理</template>
+</el-menu-item>
+
         <el-menu-item index="/back/order">
           <i class="fas fa-shopping-bag menu-icon"></i>
           <template #title>订单管理</template>

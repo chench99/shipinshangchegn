@@ -35,6 +35,12 @@ export const backendRoutes = [
         meta: { title: '零食管理', icon: 'Food', requiresAuth: true, requiresAdmin: true }
       },
       {
+        path: 'inventory',
+        name: 'InventoryManagement',
+        component: () => import('@/views/backend/Inventory.vue'),
+        meta: { title: '库存管理', icon: 'Box', requiresAuth: true, requiresAdmin: true }
+      },
+      {
         path: 'order',
         name: 'OrderManagement',
         component: () => import('@/views/backend/order/index.vue'),

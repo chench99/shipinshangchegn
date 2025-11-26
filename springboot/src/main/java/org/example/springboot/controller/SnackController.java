@@ -147,6 +147,20 @@ public class SnackController {
     }
 
     /**
+     * 调整库存（库存管理功能）
+     */
+    @Operation(summary = "调整库存")
+    @PutMapping("/{id}/stock")
+    public Result<Void> adjustStock (
+            @Parameter(description = "零食ID") @PathVariable  Long id,
+            @Parameter(description = "调整数量（正数入库，负数出库）") @RequestParam Integer quantity) {
+        
+        log.info("收到库存调整请求: snackId={}, quantity={}" , id, quantity);
+        snackService.adjustStock(id, quantity);
+        return  Result.success();
+    }
+
+    /**
      * 根据分类ID获取零食列表
      */
     @Operation(summary = "根据分类ID获取零食列表")

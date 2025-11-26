@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : mysql
+ Source Server         : root
  Source Server Type    : MySQL
- Source Server Version : 80041 (8.0.41)
+ Source Server Version : 80034 (8.0.34)
  Source Host           : localhost:3306
  Source Schema         : snack_db_2025
 
  Target Server Type    : MySQL
- Target Server Version : 80041 (8.0.41)
+ Target Server Version : 80034 (8.0.34)
  File Encoding         : 65001
 
- Date: 17/09/2025 15:59:32
+ Date: 26/11/2025 14:17:24
 */
 
 SET NAMES utf8mb4;
@@ -42,7 +42,7 @@ CREATE TABLE `sys_file_info`  (
   INDEX `idx_is_temp`(`is_temp` ASC) USING BTREE,
   INDEX `idx_create_time`(`create_time` ASC) USING BTREE,
   INDEX `idx_file_path`(`file_path` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 84 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '文件信息表-精简版' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 104 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '文件信息表-精简版' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_file_info
@@ -50,7 +50,7 @@ CREATE TABLE `sys_file_info`  (
 INSERT INTO `sys_file_info` VALUES (18, 'image323232s.jpg', '/files/temp/1757916488895.jpg', 7727, 'IMG', 'USER_AVATAR', '2', 'avatar', 2, 0, 1, '2025-09-15 14:08:09', '2025-09-16 14:08:09');
 INSERT INTO `sys_file_info` VALUES (19, 'ima9897ges.jpg', '/files/bussiness/user_avatar/1757916661296.jpg', 4977, 'IMG', 'USER_AVATAR', '2', 'avatar', 2, 0, 1, '2025-09-15 14:11:01', NULL);
 INSERT INTO `sys_file_info` VALUES (20, 'Untitl777ed.jpg', '/files/bussiness/user_avatar/1757916687452.jpg', 7598, 'IMG', 'USER_AVATAR', '2', 'avatar', 2, 0, 1, '2025-09-15 14:11:27', NULL);
-INSERT INTO `sys_file_info` VALUES (21, 'ima22ges.jpg', '/files/bussiness/snack_cover/1757917331578.jpg', 20114, 'IMG', 'SNACK_COVER', '0', 'coverImage', 1, 0, 1, '2025-09-15 14:22:12', NULL);
+INSERT INTO `sys_file_info` VALUES (21, 'ima22ges.jpg', '/files/bussiness/snack_cover/1757917331578.jpg', 20114, 'IMG', 'SNACK_COVER', '0', 'coverImage', 1, 0, 0, '2025-09-15 14:22:12', NULL);
 INSERT INTO `sys_file_info` VALUES (22, '111.jpg', '/files/bussiness/snack_detail/1757917339188.jpg', 5193, 'IMG', 'SNACK_DETAIL', '0', 'detailImages', 1, 0, 1, '2025-09-15 14:22:19', NULL);
 INSERT INTO `sys_file_info` VALUES (23, 'ima22ges.jpg', '/files/bussiness/snack_detail/1757917344888.jpg', 20114, 'IMG', 'SNACK_DETAIL', '0', 'detailImages', 1, 0, 1, '2025-09-15 14:22:25', NULL);
 INSERT INTO `sys_file_info` VALUES (24, 'COVER.jpg', '/files/bussiness/snack_detail/1757917363412.jpg', 237854, 'IMG', 'SNACK_DETAIL', '0', 'detailImages', 1, 0, 1, '2025-09-15 14:22:43', NULL);
@@ -113,6 +113,26 @@ INSERT INTO `sys_file_info` VALUES (80, 'image5432s.jpg', '/files/bussiness/caro
 INSERT INTO `sys_file_info` VALUES (81, '【哲风壁纸】卡通-派大星-海.png', '/files/bussiness/carousel_image/1758006103812.png', 1819463, 'IMG', 'CAROUSEL_IMAGE', '1', 'image', 1, 0, 0, '2025-09-16 15:01:44', NULL);
 INSERT INTO `sys_file_info` VALUES (82, 'COVER.jpg', '/files/bussiness/carousel_image/1758006398228.jpg', 237854, 'IMG', 'CAROUSEL_IMAGE', '1', 'image', 1, 0, 1, '2025-09-16 15:06:38', NULL);
 INSERT INTO `sys_file_info` VALUES (83, 'Untitl888ed.jpg', '/files/bussiness/user_avatar/1758010605687.jpg', 6017, 'IMG', 'USER_AVATAR', '1', 'avatar', 1, 0, 1, '2025-09-16 16:16:46', NULL);
+INSERT INTO `sys_file_info` VALUES (84, '20210810185711_1b7cc.jpeg', '/files/bussiness/snack_cover/1760684997586.jpeg', 70084, 'IMG', 'SNACK_COVER', '10', 'coverImage', 1, 0, 0, '2025-10-17 15:09:58', NULL);
+INSERT INTO `sys_file_info` VALUES (85, '20210810185711_1b7cc.jpeg', '/files/bussiness/snack_cover/1760685030421.jpeg', 70084, 'IMG', 'SNACK_COVER', '10', 'coverImage', 1, 0, 1, '2025-10-17 15:10:30', NULL);
+INSERT INTO `sys_file_info` VALUES (86, '屏幕截图 2024-09-28 182430.png', '/files/bussiness/carousel_image/1760685919521.png', 4022664, 'IMG', 'CAROUSEL_IMAGE', '2', 'image', 1, 0, 1, '2025-10-17 15:25:20', NULL);
+INSERT INTO `sys_file_info` VALUES (87, '日常聊天与帮助.png', '/files/bussiness/carousel_image/1760686647836.png', 4317065, 'IMG', 'CAROUSEL_IMAGE', '4', 'image', 1, 0, 1, '2025-10-17 15:37:28', NULL);
+INSERT INTO `sys_file_info` VALUES (88, '冬阳功商品.png', '/files/bussiness/snack_cover/1760688155263.png', 738762, 'IMG', 'SNACK_COVER', '0', 'coverImage', 1, 0, 0, '2025-10-17 16:02:35', NULL);
+INSERT INTO `sys_file_info` VALUES (89, '冬阳功商品.png', '/files/bussiness/snack_cover/1760688165913.png', 738762, 'IMG', 'SNACK_COVER', '0', 'coverImage', 1, 0, 0, '2025-10-17 16:02:46', NULL);
+INSERT INTO `sys_file_info` VALUES (90, '冬阳功商品.png', '/files/bussiness/snack_cover/1760688177385.png', 738762, 'IMG', 'SNACK_COVER', '11', 'coverImage', 1, 0, 1, '2025-10-17 16:02:57', NULL);
+INSERT INTO `sys_file_info` VALUES (91, '佛跳墙商品.png', '/files/bussiness/snack_cover/1760688195337.png', 679956, 'IMG', 'SNACK_COVER', '0', 'coverImage', 1, 0, 0, '2025-10-17 16:03:15', NULL);
+INSERT INTO `sys_file_info` VALUES (92, '佛跳墙商品.png', '/files/bussiness/snack_cover/1760688221896.png', 679956, 'IMG', 'SNACK_COVER', '12', 'coverImage', 1, 0, 1, '2025-10-17 16:03:42', NULL);
+INSERT INTO `sys_file_info` VALUES (93, '红酒牛肉商品.png', '/files/bussiness/snack_cover/1760688233949.png', 649148, 'IMG', 'SNACK_COVER', '0', 'coverImage', 1, 0, 1, '2025-10-17 16:03:54', NULL);
+INSERT INTO `sys_file_info` VALUES (94, '红酒牛肉商品.png', '/files/bussiness/snack_cover/1760688264843.png', 649148, 'IMG', 'SNACK_COVER', '13', 'coverImage', 1, 0, 1, '2025-10-17 16:04:25', NULL);
+INSERT INTO `sys_file_info` VALUES (95, '龙虾商品.png', '/files/bussiness/snack_cover/1760688288217.png', 671705, 'IMG', 'SNACK_COVER', '14', 'coverImage', 1, 0, 0, '2025-10-17 16:04:48', NULL);
+INSERT INTO `sys_file_info` VALUES (96, '龙虾商品.png', '/files/bussiness/snack_cover/1760688299405.png', 671705, 'IMG', 'SNACK_COVER', '14', 'coverImage', 1, 0, 1, '2025-10-17 16:04:59', NULL);
+INSERT INTO `sys_file_info` VALUES (97, '冬阳功轮播图.png', '/files/bussiness/carousel_image/1760688332066.png', 1560041, 'IMG', 'CAROUSEL_IMAGE', '5', 'image', 1, 0, 1, '2025-10-17 16:05:32', NULL);
+INSERT INTO `sys_file_info` VALUES (98, '佛跳墙轮播图.png', '/files/bussiness/carousel_image/1760688368005.png', 1583036, 'IMG', 'CAROUSEL_IMAGE', '6', 'image', 1, 0, 1, '2025-10-17 16:06:08', NULL);
+INSERT INTO `sys_file_info` VALUES (99, '红酒牛肉轮播图.png', '/files/bussiness/carousel_image/1760688407778.png', 1570124, 'IMG', 'CAROUSEL_IMAGE', '8', 'image', 1, 0, 1, '2025-10-17 16:06:48', NULL);
+INSERT INTO `sys_file_info` VALUES (100, '龙虾轮播图.png', '/files/bussiness/carousel_image/1760688417620.png', 1696590, 'IMG', 'CAROUSEL_IMAGE', '9', 'image', 1, 0, 1, '2025-10-17 16:06:58', NULL);
+INSERT INTO `sys_file_info` VALUES (101, '20210810185711_1b7cc.jpeg', '/files/bussiness/snack_detail/1764136594380.jpeg', 70084, 'IMG', 'SNACK_DETAIL', '0', 'detailImages', NULL, 1, 1, '2025-11-26 13:56:34', NULL);
+INSERT INTO `sys_file_info` VALUES (102, '20210810185711_1b7cc.jpeg', '/files/bussiness/snack_detail/1764137169278.jpeg', 70084, 'IMG', 'SNACK_DETAIL', '0', 'detailImages', NULL, 1, 1, '2025-11-26 14:06:09', NULL);
+INSERT INTO `sys_file_info` VALUES (103, '20210810185711_1b7cc.jpeg', '/files/bussiness/snack_cover/1764137172043.jpeg', 70084, 'IMG', 'SNACK_COVER', '0', 'coverImage', NULL, 1, 1, '2025-11-26 14:06:12', NULL);
 
 -- ----------------------------
 -- Table structure for t_address
@@ -134,13 +154,14 @@ CREATE TABLE `t_address`  (
   INDEX `idx_user_id`(`user_id` ASC) USING BTREE,
   INDEX `idx_is_default`(`is_default` ASC) USING BTREE,
   CONSTRAINT `fk_address_user` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '收货地址表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '收货地址表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_address
 -- ----------------------------
 INSERT INTO `t_address` VALUES (1, 2, 'jx', '15252393509', 'ttt', 'ttt', 'ttt', 'tt111111111111', 0, '2025-09-15 13:31:06', '2025-09-16 11:16:10');
 INSERT INTO `t_address` VALUES (2, 2, 'ces111', '13123456789', '881', '51', '5156156', '1615616', 1, '2025-09-15 13:34:27', '2025-09-16 11:16:10');
+INSERT INTO `t_address` VALUES (3, 3, '陈微微', '15224688089', '', '', '', '南宁学院', 0, '2025-10-17 15:06:29', '2025-10-17 15:06:29');
 
 -- ----------------------------
 -- Table structure for t_carousel
@@ -161,12 +182,15 @@ CREATE TABLE `t_carousel`  (
   INDEX `idx_carousel_status`(`status` ASC) USING BTREE,
   INDEX `idx_carousel_sort`(`sort_order` ASC) USING BTREE,
   INDEX `idx_carousel_time`(`start_time` ASC, `end_time` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '轮播图表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '轮播图表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_carousel
 -- ----------------------------
-INSERT INTO `t_carousel` VALUES (1, '', 'PRODUCT', '1', 0, 'ENABLED', NULL, NULL, '2025-09-16 15:01:48', '2025-09-16 15:01:48');
+INSERT INTO `t_carousel` VALUES (5, '', 'PRODUCT', '11', 0, 'ENABLED', NULL, NULL, '2025-10-17 16:05:34', '2025-10-17 16:05:34');
+INSERT INTO `t_carousel` VALUES (6, '', 'PRODUCT', '12', 0, 'ENABLED', NULL, NULL, '2025-10-17 16:05:49', '2025-10-17 16:05:49');
+INSERT INTO `t_carousel` VALUES (8, '', 'PRODUCT', '13', 0, 'ENABLED', NULL, NULL, '2025-10-17 16:06:31', '2025-10-17 16:06:31');
+INSERT INTO `t_carousel` VALUES (9, '', 'PRODUCT', '14', 0, 'ENABLED', NULL, NULL, '2025-10-17 16:07:02', '2025-10-17 16:07:02');
 
 -- ----------------------------
 -- Table structure for t_cart
@@ -185,13 +209,11 @@ CREATE TABLE `t_cart`  (
   INDEX `idx_snack_id`(`snack_id` ASC) USING BTREE,
   CONSTRAINT `fk_cart_snack` FOREIGN KEY (`snack_id`) REFERENCES `t_snack` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_cart_user` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '购物车表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '购物车表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_cart
 -- ----------------------------
-INSERT INTO `t_cart` VALUES (3, 2, 7, 1, '2025-09-16 16:42:16', '2025-09-16 16:42:16');
-INSERT INTO `t_cart` VALUES (4, 2, 6, 1, '2025-09-16 16:42:16', '2025-09-16 16:42:16');
 
 -- ----------------------------
 -- Table structure for t_category
@@ -207,19 +229,14 @@ CREATE TABLE `t_category`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_sort_order`(`sort_order` ASC) USING BTREE,
   INDEX `idx_status`(`status` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '零食分类表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '零食分类表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_category
 -- ----------------------------
-INSERT INTO `t_category` VALUES (1, '膨化食品', 1, 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 10:40:29');
-INSERT INTO `t_category` VALUES (2, '坚果炒货', 2, 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 10:28:26');
-INSERT INTO `t_category` VALUES (3, '糖果巧克力', 3, 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 10:28:26');
-INSERT INTO `t_category` VALUES (4, '饼干糕点', 4, 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 10:28:26');
-INSERT INTO `t_category` VALUES (5, '果脯蜜饯', 5, 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 10:28:26');
-INSERT INTO `t_category` VALUES (6, '肉类零食', 6, 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 10:28:26');
-INSERT INTO `t_category` VALUES (7, '海味零食', 7, 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 10:28:26');
-INSERT INTO `t_category` VALUES (8, '传统糕点', 8, 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 10:28:26');
+INSERT INTO `t_category` VALUES (1, '膨化食品', 1, 'INACTIVE', '2025-09-15 10:28:26', '2025-10-17 15:59:48');
+INSERT INTO `t_category` VALUES (4, '饼干糕点', 4, 'INACTIVE', '2025-09-15 10:28:26', '2025-10-17 15:59:52');
+INSERT INTO `t_category` VALUES (11, '半成品', 10, 'ACTIVE', '2025-10-17 16:01:33', '2025-10-17 16:01:33');
 
 -- ----------------------------
 -- Table structure for t_favorite
@@ -237,12 +254,28 @@ CREATE TABLE `t_favorite`  (
   INDEX `idx_create_time`(`create_time` ASC) USING BTREE,
   CONSTRAINT `fk_favorite_snack` FOREIGN KEY (`snack_id`) REFERENCES `t_snack` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_favorite_user` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '商品收藏表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '商品收藏表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_favorite
 -- ----------------------------
-INSERT INTO `t_favorite` VALUES (3, 2, 5, '2025-09-16 10:07:10');
+
+-- ----------------------------
+-- Table structure for t_food_inventory
+-- ----------------------------
+DROP TABLE IF EXISTS `t_food_inventory`;
+CREATE TABLE `t_food_inventory`  (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `snack_id` bigint NOT NULL,
+  `quantity` int NOT NULL DEFAULT 0,
+  `unit` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `uk_snack_id`(`snack_id` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of t_food_inventory
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for t_order
@@ -271,13 +304,17 @@ CREATE TABLE `t_order`  (
   INDEX `idx_order_ship_time`(`ship_time` ASC) USING BTREE,
   CONSTRAINT `fk_order_address` FOREIGN KEY (`address_id`) REFERENCES `t_address` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `fk_order_user` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '订单表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '订单表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_order
 -- ----------------------------
 INSERT INTO `t_order` VALUES (1, 'ORDER17579142765495E2D6F', 2, 1, 1199, 'COMPLETED', 'ces1', '2025-09-15 13:31:17', '2025-09-15 13:32:06', '2025-09-15 13:38:13', '2025-09-15 13:38:28', NULL);
-INSERT INTO `t_order` VALUES (2, 'ORDER1758010574163D99D6A', 2, 2, 2398, 'PAID', NULL, '2025-09-16 16:16:14', '2025-09-16 16:16:17', NULL, NULL, NULL);
+INSERT INTO `t_order` VALUES (2, 'ORDER1758010574163D99D6A', 2, 2, 2398, 'COMPLETED', NULL, '2025-09-16 16:16:14', '2025-09-16 16:16:17', '2025-10-18 20:47:40', '2025-10-18 20:51:58', NULL);
+INSERT INTO `t_order` VALUES (3, 'ORDER176068479076472B275', 3, 3, 599, 'COMPLETED', NULL, '2025-10-17 15:06:31', '2025-10-17 15:06:37', '2025-10-18 20:47:39', '2025-10-18 20:49:28', NULL);
+INSERT INTO `t_order` VALUES (4, 'ORDER17606884822313D1E52', 3, 3, 7999, 'COMPLETED', NULL, '2025-10-17 16:08:02', '2025-10-17 16:08:06', '2025-10-18 20:47:38', '2025-10-18 20:49:26', NULL);
+INSERT INTO `t_order` VALUES (5, 'ORDER1760791759347769E0D', 3, 3, 76977, 'SHIPPED', NULL, '2025-10-18 20:49:19', '2025-10-18 20:49:22', '2025-10-18 20:52:29', NULL, NULL);
+INSERT INTO `t_order` VALUES (6, 'ORDER176413755739616A1E5', 3, 3, 72000, 'PAID', NULL, '2025-11-26 14:12:37', '2025-11-26 14:12:40', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for t_order_item
@@ -297,13 +334,20 @@ CREATE TABLE `t_order_item`  (
   INDEX `idx_snack_id`(`snack_id` ASC) USING BTREE,
   CONSTRAINT `fk_order_item_order` FOREIGN KEY (`order_id`) REFERENCES `t_order` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_order_item_snack` FOREIGN KEY (`snack_id`) REFERENCES `t_snack` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '订单项表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '订单项表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_order_item
 -- ----------------------------
 INSERT INTO `t_order_item` VALUES (1, 1, 8, 1, 1199, '曲奇饼干', NULL, '2025-09-15 13:31:17');
 INSERT INTO `t_order_item` VALUES (2, 2, 8, 2, 1199, '曲奇饼干', '/files/bussiness/snack_cover/1757924124435.jpg', '2025-09-16 16:16:14');
+INSERT INTO `t_order_item` VALUES (3, 3, 1, 1, 599, '薯片原味', '/files/bussiness/snack_cover/1757917659396.jpg', '2025-10-17 15:06:31');
+INSERT INTO `t_order_item` VALUES (4, 4, 14, 1, 7999, '大龙虾', '/files/bussiness/snack_cover/1760688299405.png', '2025-10-17 16:08:02');
+INSERT INTO `t_order_item` VALUES (5, 5, 11, 1, 3999, '冬阳功', '/files/bussiness/snack_cover/1760688177385.png', '2025-10-18 20:49:19');
+INSERT INTO `t_order_item` VALUES (6, 5, 12, 1, 4999, '佛跳墙', '/files/bussiness/snack_cover/1760688221896.png', '2025-10-18 20:49:19');
+INSERT INTO `t_order_item` VALUES (7, 5, 13, 20, 2999, '红酒牛肉', '/files/bussiness/snack_cover/1760688264843.png', '2025-10-18 20:49:19');
+INSERT INTO `t_order_item` VALUES (8, 5, 14, 1, 7999, '大龙虾', '/files/bussiness/snack_cover/1760688299405.png', '2025-10-18 20:49:19');
+INSERT INTO `t_order_item` VALUES (9, 6, 17, 8, 9000, '蒜香骨', '/files/bussiness/snack_cover/1764137172043.jpeg', '2025-11-26 14:12:37');
 
 -- ----------------------------
 -- Table structure for t_review
@@ -319,7 +363,7 @@ CREATE TABLE `t_review`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_review_snack`(`snack_id` ASC) USING BTREE,
   INDEX `idx_review_user`(`user_id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '零食评价表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci COMMENT = '零食评价表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_review
@@ -352,19 +396,18 @@ CREATE TABLE `t_snack`  (
   INDEX `idx_snack_create_time`(`create_time` ASC) USING BTREE,
   INDEX `idx_snack_favorite_count`(`favorite_count` ASC) USING BTREE,
   CONSTRAINT `fk_snack_category` FOREIGN KEY (`category_id`) REFERENCES `t_category` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '零食表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '零食表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_snack
 -- ----------------------------
-INSERT INTO `t_snack` VALUES (1, 1, '薯片原味', '香脆可口的原味薯片，精选优质土豆制作', 599, 99, '/files/bussiness/snack_cover/1757917659396.jpg', '[\"/files/bussiness/snack_detail/1757918107494.jpg\", \"/files/bussiness/snack_detail/1757918107563.jpg\", \"/files/bussiness/snack_detail/1757918107570.jpg\"]', 'ON_SALE', 0, 0, '2025-09-15 10:28:26', '2025-09-16 10:43:25');
-INSERT INTO `t_snack` VALUES (2, 1, '爆米花焦糖味', '香甜可口的焦糖味爆米花，休闲必备', 899, 80, '/files/bussiness/snack_cover/1757924023959.jpg', '[\"/files/bussiness/snack_detail/1757924028417.jpg\", \"/files/bussiness/snack_detail/1757924040182.jpg\"]', 'ON_SALE', 0, 0, '2025-09-15 10:28:26', '2025-09-15 16:14:00');
-INSERT INTO `t_snack` VALUES (3, 2, '混合坚果', '精选核桃、杏仁、腰果等多种坚果', 1299, 50, '/files/bussiness/snack_cover/1757924047587.jpg', '[\"/files/bussiness/snack_detail/1757924049222.jpg\", \"/files/bussiness/snack_detail/1757924055947.jpg\"]', 'ON_SALE', 0, 0, '2025-09-15 10:28:26', '2025-09-16 10:31:04');
-INSERT INTO `t_snack` VALUES (4, 2, '瓜子五香味', '传统五香味瓜子，闲暇时光的好伴侣', 799, 120, '/files/bussiness/snack_cover/1757924066405.jpg', '[\"/files/bussiness/snack_detail/1757924067839.jpg\", \"/files/bussiness/snack_detail/1757924073299.jpg\"]', 'ON_SALE', 0, 0, '2025-09-15 10:28:26', '2025-09-15 16:14:33');
-INSERT INTO `t_snack` VALUES (5, 3, '牛奶巧克力', '浓郁香甜的牛奶巧克力，丝滑口感', 1599, 60, '/files/bussiness/snack_cover/1757924084842.jpg', '[\"/files/bussiness/snack_detail/1757924086424.jpg\", \"/files/bussiness/snack_detail/1757924092549.jpg\"]', 'ON_SALE', 0, 1, '2025-09-15 10:28:26', '2025-09-16 10:07:10');
-INSERT INTO `t_snack` VALUES (6, 3, '彩虹糖', '七彩缤纷的水果味糖果，酸甜可口', 699, 90, '/files/bussiness/snack_cover/1757924099707.jpg', '[\"/files/bussiness/snack_detail/1757924101369.jpg\", \"/files/bussiness/snack_detail/1757924104363.jpg\"]', 'ON_SALE', 0, 0, '2025-09-15 10:28:26', '2025-09-15 16:15:07');
-INSERT INTO `t_snack` VALUES (7, 4, '奥利奥饼干', '经典巧克力夹心饼干，香浓美味', 999, 75, '/files/bussiness/snack_cover/1757924110884.jpg', '[\"/files/bussiness/snack_detail/1757924114885.jpg\", \"/files/bussiness/snack_detail/1757924116938.jpg\"]', 'ON_SALE', 0, 0, '2025-09-15 10:28:26', '2025-09-15 16:15:17');
-INSERT INTO `t_snack` VALUES (8, 4, '曲奇饼干', '酥脆香甜的黄油曲奇饼干', 1199, 37, '/files/bussiness/snack_cover/1757924124435.jpg', '[\"/files/bussiness/snack_detail/1757924125159.jpg\", \"/files/bussiness/snack_detail/1757924128107.jpg\"]', 'ON_SALE', 0, 0, '2025-09-15 10:28:26', '2025-09-16 16:16:19');
+INSERT INTO `t_snack` VALUES (1, 1, '薯片原味', '香脆可口的原味薯片，精选优质土豆制作', 599, 98, '/files/bussiness/snack_cover/1757917659396.jpg', '[\"/files/bussiness/snack_detail/1757918107494.jpg\", \"/files/bussiness/snack_detail/1757918107563.jpg\", \"/files/bussiness/snack_detail/1757918107570.jpg\"]', 'OFF_SHELF', 0, 0, '2025-09-15 10:28:26', '2025-10-17 16:09:12');
+INSERT INTO `t_snack` VALUES (8, 4, '曲奇饼干', '酥脆香甜的黄油曲奇饼干', 1199, 37, '/files/bussiness/snack_cover/1757924124435.jpg', '[\"/files/bussiness/snack_detail/1757924125159.jpg\", \"/files/bussiness/snack_detail/1757924128107.jpg\"]', 'OFF_SHELF', 0, 0, '2025-09-15 10:28:26', '2025-10-17 15:10:14');
+INSERT INTO `t_snack` VALUES (11, 11, '冬阳功', NULL, 3999, 29, '/files/bussiness/snack_cover/1760688177385.png', NULL, 'ON_SALE', 0, 0, '2025-10-17 16:02:52', '2025-10-18 20:49:19');
+INSERT INTO `t_snack` VALUES (12, 11, '佛跳墙', NULL, 4999, 49, '/files/bussiness/snack_cover/1760688221896.png', NULL, 'ON_SALE', 0, 0, '2025-10-17 16:03:33', '2025-10-18 20:49:19');
+INSERT INTO `t_snack` VALUES (13, 11, '红酒牛肉', NULL, 2999, 9, '/files/bussiness/snack_cover/1760688264843.png', NULL, 'ON_SALE', 0, 0, '2025-10-17 16:04:15', '2025-10-18 20:49:19');
+INSERT INTO `t_snack` VALUES (14, 11, '大龙虾', NULL, 7999, 31, '/files/bussiness/snack_cover/1760688299405.png', NULL, 'ON_SALE', 0, 0, '2025-10-17 16:04:50', '2025-10-18 20:49:19');
+INSERT INTO `t_snack` VALUES (17, 11, '蒜香骨', '', 9000, 22, '/files/bussiness/snack_cover/1764137172043.jpeg', '[\"/files/bussiness/snack_detail/1764137169278.jpeg\"]', 'ON_SALE', 0, 0, '2025-11-26 14:06:32', '2025-11-26 14:12:37');
 
 -- ----------------------------
 -- Table structure for t_user
@@ -386,13 +429,14 @@ CREATE TABLE `t_user`  (
   INDEX `idx_user_type`(`user_type` ASC) USING BTREE,
   INDEX `idx_status`(`status` ASC) USING BTREE,
   INDEX `idx_user_create_time`(`create_time` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
 INSERT INTO `t_user` VALUES (1, 'admin', '$2a$10$0EB8hAzCT25cUhNeXDOhkujD./0TYjjiENnpirImJg4q4MeE/pKPa', '系统管理员', '/files/bussiness/user_avatar/1758010605687.jpg', NULL, 'ADMIN', 'ACTIVE', '2025-09-15 10:28:26', '2025-09-16 16:16:48');
 INSERT INTO `t_user` VALUES (2, 'testuser', '$2a$10$0EB8hAzCT25cUhNeXDOhkujD./0TYjjiENnpirImJg4q4MeE/pKPa', '测试用户', '/files/bussiness/user_avatar/1757916687452.jpg', NULL, 'USER', 'ACTIVE', '2025-09-15 10:28:26', '2025-09-15 14:11:28');
+INSERT INTO `t_user` VALUES (3, 'user1', '$2a$10$PftAFY9yum9VBWbZTl8T6uz5lAUiADSGSQzvBJuAm7D.zyOJiCUZy', '微微', NULL, NULL, 'USER', 'ACTIVE', '2025-10-17 15:05:03', '2025-10-17 15:05:03');
 
 -- ----------------------------
 -- View structure for v_order_detail

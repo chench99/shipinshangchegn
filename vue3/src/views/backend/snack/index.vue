@@ -6,7 +6,7 @@
           <span>食品管理</span>
           <el-button type="primary" @click="showCreateDialog">
             <el-icon><Plus /></el-icon>
-            新增零食
+            新增食品
           </el-button>
         </div>
       </template>

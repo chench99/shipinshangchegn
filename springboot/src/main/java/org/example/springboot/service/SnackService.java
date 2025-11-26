@@ -334,6 +334,27 @@ public class SnackService {
     }
 
     /**
+     * 调整零食库存
+     * @param  id 零食ID
+     * @param  quantity 调整数量（正数增加，负数减少）
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public void adjustStock(Long id, Integer quantity) {
+        log.info("调整库存: snackId={}, quantity={}" , id, quantity);
+        
+        Snack snack = getSnackById(id); // 使用现有的 getSnackById 方法
+        int newStock = snack.getStock() + quantity;
+        
+        if (newStock < 0 ) {
+            throw new BusinessException("库存不足，操作失败" );
+        }
+        
+        snack.setStock(newStock);
+        snackMapper.updateById(snack);
+        log.info("库存调整成功，当前库存: {}" , newStock);
+    }
+
+    /**
      * 根据ID获取零食实体（内部方法）
      * @param snackId 零食ID
      * @return 零食实体
