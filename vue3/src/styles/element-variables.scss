@@ -1,0 +1,423 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #2B5BA1,
+    ),
+    'success': (
+      'base': #2E7D32,
+    ),
+    'warning': (
+      'base': #E6A23C,
+    ),
+    'danger': (
+      'base': #F56C6C,
+    ),
+    'info': (
+      'base': #909399,
+    )
+  ),
+);
+
+/* 只需要重写你需要的即可 */
+@use "element-plus/theme-chalk/src/index.scss" as *;
+
+// Element Plus 自定义样式
+// 卡片样式
+.el-card {
+  border: none !important;
+  box-shadow: none !important;
+
+  &:hover {
+    box-shadow: none !important;
+  }
+}
+
+
+
+
+
+// Dialog 样式
+.el-dialog {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  
+  .el-dialog__header {
+    margin: 0;
+    padding: 20px 24px;
+    border-bottom: 1px solid #ebeef5;
+    
+    .el-dialog__title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+  
+  .el-dialog__body {
+    padding: 24px;
+  }
+  
+  .el-dialog__footer {
+    padding: 16px 24px;
+    border-top: 1px solid #ebeef5;
+  }
+}
+
+// Form 样式
+.el-form {
+  .el-form-item {
+    margin-bottom: 24px;
+    
+    .el-form-item__label {
+      font-weight: 500;
+      color: #333;
+      padding-bottom: 8px;
+    }
+    
+    .el-form-item__error {
+      padding-top: 4px;
+    }
+  }
+}
+
+// Input 样式
+.el-input {
+  .el-input__wrapper {
+    box-shadow: 0 0 0 1px #dcdfe6 inset;
+    transition: all 0.2s;
+    
+    &:hover {
+      box-shadow: 0 0 0 1px #2B5BA1 inset;
+    }
+    
+    &.is-focus {
+      box-shadow: 0 0 0 1px #2B5BA1 inset !important;
+    }
+  }
+  
+  &.is-disabled .el-input__wrapper {
+    background-color: #f5f7fa;
+    box-shadow: 0 0 0 1px #e4e7ed inset;
+  }
+}
+
+// Tag 糖果风样式（基于 UI 规范：奶油黄/焦糖橙/巧克力棕 + Claymorphism）
+.el-tag {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 193, 7, 0.28);
+  background: linear-gradient(145deg, #FFFFFF, #FFF7E6);
+  color: #6D4C41;
+  box-shadow: 4px 4px 12px rgba(255, 171, 64, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.el-tag--small { border-radius: 10px; }
+.el-tag--large { border-radius: 14px; }
+
+// Type 变体
+.el-tag.el-tag--primary {
+  background: linear-gradient(145deg, #FFE9C7, #FFD59A);
+  border-color: #FFB74D;
+  color: #8D6E63;
+}
+
+.el-tag.el-tag--info {
+  background: linear-gradient(145deg, #FFFDF6, #FFF3E0);
+  border-color: rgba(255, 193, 7, 0.32);
+  color: #6D4C41;
+}
+
+.el-tag.el-tag--success {
+  background: linear-gradient(145deg, #E8F5E9, #C8E6C9);
+  border-color: #81C784;
+  color: #2E7D32;
+}
+
+.el-tag.el-tag--warning {
+  background: linear-gradient(145deg, #FFF8E1, #FFE082);
+  border-color: #F9A825;
+  color: #E65100;
+}
+
+.el-tag.el-tag--danger {
+  background: linear-gradient(145deg, #FFE0E1, #FFCDD2);
+  border-color: #E53935;
+  color: #D32F2F;
+}
+
+// 纯色和朴素效果微调
+.el-tag.is-hit { box-shadow: 0 0 0 2px rgba(255, 143, 0, 0.08); }
+
+.el-tag--dark {
+  color: #fff;
+  box-shadow: 4px 4px 12px rgba(255, 171, 64, 0.16);
+}
+
+.el-tag--dark.el-tag--primary { background: linear-gradient(145deg, #FFB74D, #FF8F00); border-color: #FF8F00; }
+.el-tag--dark.el-tag--success { background: linear-gradient(145deg, #81C784, #43A047); border-color: #43A047; }
+.el-tag--dark.el-tag--warning { background: linear-gradient(145deg, #FFD54F, #F9A825); border-color: #F9A825; }
+.el-tag--dark.el-tag--danger { background: linear-gradient(145deg, #FF8A80, #E53935); border-color: #E53935; }
+.el-tag--dark.el-tag--info { background: linear-gradient(145deg, #CFD8DC, #90A4AE); border-color: #90A4AE; }
+
+// 关闭按钮颜色统一
+.el-tag .el-tag__close {
+  color: inherit;
+}
+.el-tag .el-tag__close:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+
+// Checkbox 糖果风样式（圆角+渐变+粘土质感）
+.el-checkbox {
+  align-items: center;
+
+  .el-checkbox__input {
+    .el-checkbox__inner {
+      width: 18px;
+      height: 18px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 193, 7, 0.28);
+      background: linear-gradient(145deg, #FFFFFF, #FFF7E6);
+      box-shadow: 0 4px 10px rgba(255, 171, 64, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      transition: all 0.2s ease;
+    }
+
+    &:hover .el-checkbox__inner {
+      box-shadow: 0 6px 14px rgba(255, 171, 64, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    }
+
+    &.is-focus .el-checkbox__inner {
+      box-shadow: 0 0 0 3px rgba(255, 143, 0, 0.18), inset 0 1px 0 rgba(255,255,255,0.7);
+    }
+  }
+
+  .el-checkbox__label {
+    padding-left: 8px;
+    color: #6D4C41;
+    font-weight: 600;
+  }
+
+  &.is-checked {
+    .el-checkbox__inner {
+      background: linear-gradient(145deg, #FFB74D, #FF8F00);
+      border-color: #FF8F00;
+      box-shadow: 0 10px 22px rgba(255, 143, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    }
+
+    .el-checkbox__inner::after {
+      border-color: #FFF7E6;
+      border-width: 2px;
+      left: 5px;
+      top: 1px;
+      width: 5px;
+      height: 10px;
+    }
+
+    .el-checkbox__label { color: #5D4037; }
+  }
+
+  &.is-indeterminate {
+    .el-checkbox__inner {
+      background: linear-gradient(145deg, #FFB74D, #FF8F00);
+      border-color: #FF8F00;
+      box-shadow: 0 10px 22px rgba(255, 143, 0, 0.22), inset 0 1px 0 rgba(255,255,255,0.55);
+    }
+
+    .el-checkbox__inner::before {
+      background-color: #FFF7E6;
+      height: 2px;
+      left: 3px;
+      right: 3px;
+      top: 8px;
+      border-radius: 2px;
+    }
+  }
+
+  &.is-disabled {
+    .el-checkbox__inner {
+      background: linear-gradient(145deg, #F7F7F7, #F0F0F0);
+      border-color: #E0E0E0;
+      box-shadow: none;
+    }
+    .el-checkbox__label { color: #BDBDBD; font-weight: 500; }
+  }
+}
+
+// Checkbox 尺寸微调
+.el-checkbox.el-checkbox--small {
+  .el-checkbox__inner { width: 16px; height: 16px; border-radius: 6px; }
+}
+
+.el-checkbox.el-checkbox--large {
+  .el-checkbox__inner { width: 20px; height: 20px; border-radius: 8px; }
+}
+
+// Radio 糖果风样式（胶囊圆点 + 渐变 + 立体）
+.el-radio {
+  align-items: center;
+
+  .el-radio__input {
+    .el-radio__inner {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 193, 7, 0.28);
+      background: linear-gradient(145deg, #FFFFFF, #FFF7E6);
+      box-shadow: 0 4px 10px rgba(255, 171, 64, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      transition: all 0.2s ease;
+    }
+
+    &:hover .el-radio__inner {
+      box-shadow: 0 6px 14px rgba(255, 171, 64, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    }
+
+    &.is-focus .el-radio__inner {
+      box-shadow: 0 0 0 3px rgba(255, 143, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .el-radio__label {
+    padding-left: 8px;
+    color: #6D4C41;
+    font-weight: 600;
+  }
+
+  &.is-checked {
+    .el-radio__inner {
+      border-color: #FF8F00;
+      background: linear-gradient(145deg, #FFB74D, #FF8F00);
+      box-shadow: 0 10px 22px rgba(255, 143, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    }
+
+    .el-radio__inner::after {
+      width: 8px;
+      height: 8px;
+      background-color: #FFF7E6;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .el-radio__label { color: #5D4037; }
+  }
+
+  &.is-disabled {
+    .el-radio__inner {
+      background: linear-gradient(145deg, #F7F7F7, #F0F0F0);
+      border-color: #E0E0E0;
+      box-shadow: none;
+    }
+    .el-radio__label { color: #BDBDBD; font-weight: 500; }
+  }
+}
+
+.el-radio.el-radio--small {
+  .el-radio__inner { width: 16px; height: 16px; }
+}
+
+.el-radio.el-radio--large {
+  .el-radio__inner { width: 20px; height: 20px; }
+}
+
+// Switch 糖果风样式（胶囊轨道 + 果冻按钮）
+.el-switch {
+  .el-switch__core {
+    border-radius: 999px !important;
+    border: 1px solid rgba(255, 193, 7, 0.28) !important;
+    background: linear-gradient(145deg, #FFFFFF, #FFF7E6) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 6px 14px rgba(255, 171, 64, 0.10) !important;
+    transition: all 0.2s ease;
+  }
+
+  .el-switch__action {
+    width: 18px;
+    height: 18px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+
+  &.is-checked {
+    .el-switch__core {
+      background: linear-gradient(145deg, #FFB74D, #FF8F00) !important;
+      border-color: #FF8F00 !important;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), 0 10px 22px rgba(255,143,0,0.22) !important;
+    }
+  }
+
+  &.is-disabled {
+    .el-switch__core {
+      background: linear-gradient(145deg, #F7F7F7, #F0F0F0) !important;
+      border-color: #E0E0E0 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .is-focus .el-switch__core {
+    box-shadow: 0 0 0 3px rgba(255, 143, 0, 0.18), inset 0 1px 0 rgba(255,255,255,0.7) !important;
+  }
+}
+
+// Select 糖果风样式（输入框 + 下拉浮层 + 条目态）
+.el-select {
+  .el-select__wrapper {
+    border: 1px solid rgba(255, 193, 7, 0.28);
+    background: linear-gradient(145deg, #FFFFFF, #FFF7E6);
+    box-shadow: 0 4px 10px rgba(255, 171, 64, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 6px 14px rgba(255, 171, 64, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    }
+
+    &.is-focused {
+      box-shadow: 0 0 0 3px rgba(255, 143, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  &.is-disabled {
+    .el-select__wrapper {
+      background: linear-gradient(145deg, #F7F7F7, #F0F0F0);
+      border-color: #E0E0E0;
+      box-shadow: none;
+    }
+  }
+
+  .el-select__caret {
+    color: #8D6E63;
+  }
+}
+
+// 下拉浮层（Popper）
+.el-select-dropdown {
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 193, 7, 0.28) !important;
+  background: linear-gradient(145deg, #FFFFFF, #FFF7E6) !important;
+  box-shadow: 0 12px 28px rgba(255, 171, 64, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  padding: 6px !important;
+  overflow: hidden;
+}
+
+.el-select-dropdown__item {
+  border-radius: 8px;
+  margin: 2px 4px;
+  color: #5D4037;
+  font-weight: 600;
+  transition: all 0.15s ease;
+
+  &.is-disabled {
+    color: #BDBDBD;
+    opacity: 0.8;
+  }
+
+  &:not(.is-disabled):hover {
+    background: linear-gradient(145deg, #FFF7E6, #FFE8C7);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 6px 14px rgba(255, 171, 64, 0.10);
+  }
+
+  &.selected {
+    background: linear-gradient(145deg, #FFEBCC, #FFD59A);
+    color: #4E342E;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 8px 18px rgba(255, 143, 0, 0.16);
+  }
+}
